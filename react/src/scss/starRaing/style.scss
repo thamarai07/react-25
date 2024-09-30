@@ -1,0 +1,21 @@
+.starrating__wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+
+.star {
+    transition: all 0.4s;
+    &.active {
+        color: #fff700;
+        transform: scale(1.2);
+    }
+    &.inactive {
+        color: black;
+    }
+}
+
+
+

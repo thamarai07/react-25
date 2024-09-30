@@ -10,9 +10,6 @@ function RandomColor() {
     return Math.floor(Math.random() * length);
   }
 
-  useEffect(() => {
-    console.log(createRandomUtils(17));
-  }, []);
 
   function handleCreateRandomHexNumber() {
     const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "A", "B", "C", "D", "E", "F"];

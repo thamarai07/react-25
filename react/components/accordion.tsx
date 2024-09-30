@@ -18,7 +18,6 @@ export default function Home() {
   const handleMultiSelection = (data: number) => {
     const cypmultiple = [...Multiple];
     const findIndexofMultiple = cypmultiple.indexOf(data);
-    console.log(findIndexofMultiple);
     if (findIndexofMultiple === -1) cypmultiple.push(data);
     else cypmultiple.splice(findIndexofMultiple, 1);
 
