@@ -61,7 +61,6 @@ export default function LoadMore() {
       if (data && data.products && data.products.length > 0) {
         setProduct((prevData)=>[...prevData,...data.products]);
         setLoading(false);
-        console.log(data.products);
       }
     } catch (e) {
       setError(e);

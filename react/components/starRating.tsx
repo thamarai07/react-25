@@ -24,7 +24,6 @@ function starRating({ noOfStars = 5 }) {
     <div className="starrating__wrap mb-10">
       {[...Array(noOfStars)].map((_, index) => {
         index += 1;
-
         return (
           <BiStar
             key={index}

@@ -1,5 +1,5 @@
 "use client";
-import dummy from "../src/lib/dummydata"
+import dummy from "../src/lib/dummydata";
 import { IoIosArrowDown } from "react-icons/io";
 import { useState } from "react";
 import "../src/scss/style.scss";
@@ -30,7 +30,10 @@ export default function Home() {
       <div>
         <p className="accordion__title">Accordion</p>
         <div className="wrapper">
-          <button className={`accordion__btn`} onClick={() => setenableMultiSection(!enableMultiSection)}>
+          <button
+            className={`accordion__btn`}
+            onClick={() => setenableMultiSection(!enableMultiSection)}
+          >
             Enable Multi Selection
           </button>
           <div className="accordion">
@@ -68,10 +71,7 @@ export default function Home() {
                     ? Multiple.indexOf(values.id) !== -1 && (
                         <p
                           className={`accordion__item--ans ${
-                            clickedId === values.id ||
-                            Multiple.indexOf(values.id) !== -1
-                              ? "active"
-                              : ""
+                            Multiple.indexOf(values.id) !== -1 && "active"
                           }`}
                         >
                           {values.ans}
@@ -80,7 +80,9 @@ export default function Home() {
                     : clickedId == values.id && (
                         <p
                           className={`accordion__item--ans ${
-                            clickedId === values.id || Multiple.indexOf(values.id) !== -1 ? "active" : ""
+                            clickedId === values.id 
+                              && "active"
+                              
                           }`}
                         >
                           {values.ans}

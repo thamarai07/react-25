@@ -5,7 +5,7 @@ import StarRating from "@/components/starRating";
 import SliderImage from '@/components/sliderImage';
 import LoadMoreProduct from "@/components/load-more-product";
 import TreeView from '@/components/tree-view';
-
+import QRGenerator from '@/components/qr-code-generator';
 function Home() {
 
   const url ="https://picsum.photos/v2/list";
@@ -18,6 +18,7 @@ function Home() {
         <SliderImage url={url} page={1} limit={10}/>
         <LoadMoreProduct/>
         <TreeView/>
+        <QRGenerator/>
     </>
   )
 }
