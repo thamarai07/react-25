@@ -1,0 +1,40 @@
+.tab__wrapper {
+  padding: 34px;
+}
+.tab__heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.tab__button {
+  background-color: red;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.tab__button span {
+  position: relative;
+  display: inline-block;
+}
+.tab__button span::after {
+  position: absolute;
+  content: "";
+  background: url("../../images/next.png") no-repeat center center;
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  transition: all 0.4s ease;
+}
+.tab__button:hover {
+  background-color: blue;
+}
+.tab__button:hover span::after {
+  transform: translateX(10%) translateY(-40%) rotate(180deg);
+  transform-origin: center;
+}/*# sourceMappingURL=style.css.map */

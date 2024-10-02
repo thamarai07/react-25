@@ -11,6 +11,9 @@ import TreeView from "@/components/tree-view";
 import QRGenerator from "@/components/qr-code-generator";
 import LightAndDark from "@/components/light-dark";
 import ScrollIndicator from "@/components/scroll-indicator";
+import TabMain from "@/components/tab";
+
+
 function Home() {
   const url = "https://picsum.photos/v2/list";
 
@@ -26,6 +29,7 @@ function Home() {
         <QRGenerator />
         <LightAndDark />
         <ScrollIndicator/>
+        <TabMain/>
       </Provider>
     </>
   );

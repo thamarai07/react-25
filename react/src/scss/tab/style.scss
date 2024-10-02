@@ -1,0 +1,44 @@
+.tab {
+    &__wrapper {
+        padding: 34px;
+    }
+    &__heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    &__button {
+        background-color: red;
+        color: white;
+        padding: 10px 40px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.4s;
+        span {
+            position: relative;
+            display: inline-block;
+
+            &::after {
+                position: absolute;
+                content: "";
+                background: url("../../images/next.png") no-repeat center center;
+                background-size: cover; // Ensure the image is sized correctly
+                width: 15px;
+                height: 15px;
+                top: 50%; // Vertically center the image relative to the text
+                right: -30px;
+                transform: translateY(-50%); // Adjust for centering
+                transition: all 0.4s ease; // Add ease for smooth transition
+            }
+        }
+        &:hover {
+            background-color: blue;
+
+            span::after {
+                transform: translateX(10%) translateY(-40%) rotate(180deg); // Ensure it keeps centering while rotating
+                transform-origin: center; // Set rotation origin to the center
+            }
+        }
+    }
+}
