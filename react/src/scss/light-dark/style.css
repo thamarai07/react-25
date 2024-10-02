@@ -1,0 +1,31 @@
+:root {
+  --background: #fff;
+  --text-primary: #000;
+  --button-bg: #000;
+  --button-text: #fff;
+}
+
+[data-theme=dark] {
+  --background: #000;
+  --text-primary: #fff;
+  --button-bg: #000000;
+  --button-text: #fcfcfc;
+}
+
+.light__dark__wrap {
+  background-color: var(--background);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  height: 100vh;
+  transition: all 0.6s;
+}
+.light__dark__wrap button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 10px 30px;
+  border-radius: 10px;
+}/*# sourceMappingURL=style.css.map */

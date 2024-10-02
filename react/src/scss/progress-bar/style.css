@@ -1,0 +1,23 @@
+.progress_bar__top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  background-color: #000;
+  color: white;
+}
+
+.scrollprograss__tracking__container {
+  width: 100%;
+  height: 10px;
+  background-color: gold;
+}
+
+.currect__progress__bar {
+  width: 0%;
+  height: 10px;
+  background-color: #be0aff;
+}/*# sourceMappingURL=style.css.map */
