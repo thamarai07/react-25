@@ -36,7 +36,6 @@ export default function ScrollIndicator() {
     };
   }, []);
 
-  console.log(scrollPercentage);
 
   if (loading) {
     return <div>Loading...</div>;

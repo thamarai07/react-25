@@ -12,6 +12,7 @@ import QRGenerator from "@/components/qr-code-generator";
 import LightAndDark from "@/components/light-dark";
 import ScrollIndicator from "@/components/scroll-indicator";
 import TabMain from "@/components/tab";
+import Modal from "@/components/modal";
 
 
 function Home() {
@@ -30,6 +31,7 @@ function Home() {
         <LightAndDark />
         <ScrollIndicator/>
         <TabMain/>
+        <Modal/>
       </Provider>
     </>
   );
