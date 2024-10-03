@@ -13,7 +13,8 @@ import LightAndDark from "@/components/light-dark";
 import ScrollIndicator from "@/components/scroll-indicator";
 import TabMain from "@/components/tab";
 import Modal from "@/components/modal";
-
+import GitProfileFilter from "@/components/git-profile-filter";
+import SearchAutoComplete from "@/components/search-auto-complet";
 
 function Home() {
   const url = "https://picsum.photos/v2/list";
@@ -32,6 +33,8 @@ function Home() {
         <ScrollIndicator/>
         <TabMain/>
         <Modal/>
+        <GitProfileFilter/>
+        <SearchAutoComplete/>
       </Provider>
     </>
   );

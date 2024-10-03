@@ -37,10 +37,18 @@ export default function Model() {
 }
 
 const ShowModal = ({ id, header, body, footer, onClose }: ModalInterface) => {
+
+  const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Close the modal if the user clicks outside the container
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
     <>
-      <div id={id || "Modal"} className="modal__wrap">
-        <div className="modal__container">
+      <div id={id || "Modal"} className="modal__wrap" onClick={handleOverlayClick}>
+        <div className="modal__container" onClick={(e) => e.stopPropagation()}>
           <div className="modal__header">
             <span className="modal__header--cls" onClick={onClose}></span>
             <h2>{header}</h2>
