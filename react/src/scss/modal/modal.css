@@ -11,36 +11,66 @@
 .modal__btn:hover {
   background-color: seagreen;
 }
+.modal__container {
+  background-color: peru;
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+  border-radius: 0px;
+  animation: animate-background-and-border 2s infinite alternate;
+}
 .modal__wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  z-index: 1;
+  padding-top: 150px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background-color: black;
 }
 .modal__header {
   font-size: 20px;
   text-align: center;
-  margin: 30px 0px;
+  margin: 20px 0px;
+  width: 100%;
+  position: relative;
+  font-weight: 800;
 }
 .modal__header--cls {
-  position: relative;
+  position: absolute;
+  right: 0px;
+  top: -30px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 1s;
+}
+.modal__header--cls::before, .modal__header--cls::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 1px;
+  animation: animate-width 1s infinite;
 }
 .modal__header--cls::after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 0px;
-  background-color: black;
-  animation: animate-width 1s infinite;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
-.modal__header--cls::before {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 0px;
-  background-color: black;
-  animation: animate-width 1s infinite;
-  transform: rotate(90deg);
+.modal__header--cls:hover {
+  background-color: darkred;
 }
 
 @keyframes animate-width {
@@ -48,6 +78,20 @@
     height: 0%;
   }
   to {
-    height: 40px;
+    height: 20px;
+  }
+}
+@keyframes animate-background-and-border {
+  0% {
+    background-color: peru;
+    border-radius: 0px;
+  }
+  50% {
+    background-color: lightblue;
+    border-radius: 20px;
+  }
+  100% {
+    background-color: lightgreen;
+    border-radius: 50px;
   }
 }/*# sourceMappingURL=modal.css.map */
