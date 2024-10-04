@@ -19,14 +19,13 @@ export default function SearchFilter() {
         item.toLowerCase().includes(query)
       );
       setFilteredUsers(filteredData);
-      setShowDropDown(filteredData.length > 0); // Show dropdown only if there are filtered results
+      setShowDropDown(filteredData.length > 0);
     } else {
       setFilteredUsers([]);
       setShowDropDown(false);
     }
   }
 
-  // Fetch user data from the API (runs once when component mounts)
   async function fetchUser() {
     setLoading(true);
     try {

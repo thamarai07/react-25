@@ -8,7 +8,6 @@ export default function TreeView() {
       <h2 className="text-center text-[32px] font-semibold mt-10 mb-10">
         Tree View NavBar
       </h2>
-
       <MenuList dynamicnav={dynamicnav} />
     </div>
   );

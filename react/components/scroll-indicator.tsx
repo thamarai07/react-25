@@ -48,7 +48,7 @@ export default function ScrollIndicator() {
   return (
     <div>
       <div className="progress_bar__top">
-        <p>Custom Tag Indicator</p>
+        <p>Custom Scroll Indicator</p>
         <div className="scrollprograss__tracking__container">
           <div
             className="currect__progress__bar"
