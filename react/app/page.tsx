@@ -15,6 +15,9 @@ import TabMain from "@/components/tab";
 import Modal from "@/components/modal";
 import GitProfileFilter from "@/components/git-profile-filter";
 import SearchAutoComplete from "@/components/search-auto-complet";
+import TicTacToe from "@/components/tic-tac-toe";
+import FeatureFlag from "@/components/feature-flag";
+import FeatureFlagGlobalState from "@/components/feature-flag/context";
 
 function Home() {
   const url = "https://picsum.photos/v2/list";
@@ -35,6 +38,10 @@ function Home() {
         <Modal/>
         <GitProfileFilter/>
         <SearchAutoComplete/>
+        <TicTacToe/>
+        <FeatureFlagGlobalState>
+          <FeatureFlag/>
+        </FeatureFlagGlobalState>
       </Provider>
     </>
   );
