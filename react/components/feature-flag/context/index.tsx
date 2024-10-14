@@ -3,7 +3,7 @@ import featureFlagDataServiceCall from "../dummydata";
 
 export const FeatureFlagContext = createContext(null);
 
-export default function FeatureFlagGlobalState({ children }) {
+export default function FeatureFlagGlobalState({ children } : any) {
   const [loading, setloading] = useState(false);
   const [featureFlag, setfeatureFlag] = useState({});
 
@@ -12,7 +12,7 @@ export default function FeatureFlagGlobalState({ children }) {
       setloading(true);
       const response = await featureFlagDataServiceCall();
       setfeatureFlag(response);
-      setloading(true);
+      setloading(false);
 
     } catch (e: any) {
       console.log(e.message);

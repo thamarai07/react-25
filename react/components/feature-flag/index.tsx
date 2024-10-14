@@ -5,7 +5,9 @@ import { FeatureFlagContext } from './context';
 
 export default function FeatureFlag() {
 
-  const {} = useContext(FeatureFlagContext)
+  const {featureFlag,loading} : any = useContext(FeatureFlagContext);
+
+  console.log(loading)
 
   const ComponentsToRender = [
     {
@@ -19,9 +21,21 @@ export default function FeatureFlag() {
       component : <TreeView/>
     }
   ]
+
+
+
+  if(loading) return <div>Loading</div>
+
+  const getFlagedComponent = (getcurrectComponent : any) =>{
+    return featureFlag[getcurrectComponent]
+  }
+
   return (
     <>
-        <h1 className='text-center mt-10 mb-10 font-semibold text-[32px]' >FeatureFlag</h1>
+        <h1 className='text-center mt-10 mb-10 font-semibold text-[32px]'>FeatureFlag</h1>
+        {
+          ComponentsToRender.map((values)=>getFlagedComponent(values.key) ? values.component : null)
+        }
     </>
   );
 }
