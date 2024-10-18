@@ -18,6 +18,8 @@ import SearchAutoComplete from "@/components/search-auto-complet";
 import TicTacToe from "@/components/tic-tac-toe";
 import FeatureFlag from "@/components/feature-flag";
 import FeatureFlagGlobalState from "@/components/feature-flag/context";
+import UseFetch from "@/components/usefetch";
+import UseOutSideClick from "@/components/useOutSideClick";
 
 function Home() {
   const url = "https://picsum.photos/v2/list";
@@ -42,6 +44,8 @@ function Home() {
         <FeatureFlagGlobalState>
           <FeatureFlag/>
         </FeatureFlagGlobalState>
+        <UseFetch/>
+        <UseOutSideClick/>
       </Provider>
     </>
   );

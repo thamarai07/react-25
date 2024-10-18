@@ -8,7 +8,6 @@ export default function LightAndDark() {
         setvalue(value === "light" ? "dark" : "light");
     }
     
-    console.log(value)
 
     return (
         <>

@@ -15,7 +15,6 @@ export default function FeatureFlagGlobalState({ children } : any) {
       setloading(false);
 
     } catch (e: any) {
-      console.log(e.message);
       throw new Error();
       setloading(false);
 

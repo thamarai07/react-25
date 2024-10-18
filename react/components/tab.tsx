@@ -68,7 +68,6 @@ const TabMain = () => {
   ];
 
   const handleCurrectTab = (index: number) => {
-    console.log("Current tab index:", index);
   };
 
   return <Tab tabContent={TabContent} onChange={handleCurrectTab} />;

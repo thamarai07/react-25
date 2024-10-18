@@ -7,7 +7,6 @@ export default function FeatureFlag() {
 
   const {featureFlag,loading} : any = useContext(FeatureFlagContext);
 
-  console.log(loading)
 
   const ComponentsToRender = [
     {
