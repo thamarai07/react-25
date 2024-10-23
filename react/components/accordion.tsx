@@ -1,8 +1,9 @@
 "use client";
 import dummy from "../src/lib/dummydata";
 import { IoIosArrowDown } from "react-icons/io";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "../src/scss/style.scss";
+import { GlobalContext } from "./GlobalContext";
 
 export default function Home() {
   const [clickedId, setclickedId] = useState<number | null>(null);
@@ -23,11 +24,12 @@ export default function Home() {
 
     setMultiple(cypmultiple);
   };
+  const {bottomref} : any = useContext(GlobalContext);
 
   return (
     <>
       {/* single section accordion */}
-      <div>
+      <div ref={bottomref}>
         <p className="accordion__title">Accordion</p>
         <div className="wrapper">
           <button

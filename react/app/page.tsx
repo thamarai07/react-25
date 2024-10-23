@@ -19,13 +19,17 @@ import TicTacToe from "@/components/tic-tac-toe";
 import FeatureFlag from "@/components/feature-flag";
 import FeatureFlagGlobalState from "@/components/feature-flag/context";
 import UseFetch from "@/components/usefetch";
-import UseOutSideClick from "@/components/useOutSideClick";
+import UseOutSideClick from "@/components/UseOutSideClick";
+import WindowsWidthAndHeight from "@/src/custom/useWindowResize";
+import ScrollTopBottom from "@/components/scrollTopBottom";
+import GlobalContextAl from "@/components/GlobalContext";
 
 function Home() {
   const url = "https://picsum.photos/v2/list";
 
   return (
     <>
+    <GlobalContextAl>
       <Provider store={store}>
         <Accordion />
         <RandomColor />
@@ -46,7 +50,10 @@ function Home() {
         </FeatureFlagGlobalState>
         <UseFetch/>
         <UseOutSideClick/>
+        <WindowsWidthAndHeight/>
+        <ScrollTopBottom/>
       </Provider>
+      </GlobalContextAl>
     </>
   );
 }

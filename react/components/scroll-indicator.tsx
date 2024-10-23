@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "@/store/store";
 import { RootState, AppDispatch } from "@/store/store";
+import { GlobalContext } from "./GlobalContext";
 
 interface Item {
   title: string;
@@ -44,11 +45,12 @@ export default function ScrollIndicator() {
   if (error) {
     return <div>Error: {error}</div>;
   }
+  const {handlebottomScroll} : any = useContext(GlobalContext);
 
   return (
     <div>
       <div className="progress_bar__top">
-        <p>Custom Scroll Indicator</p>
+        <p>Custom Scroll Indicator</p> <button onClick={handlebottomScroll}>Go to the Bottom </button>
         <div className="scrollprograss__tracking__container">
           <div
             className="currect__progress__bar"

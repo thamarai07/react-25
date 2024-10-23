@@ -1,19 +1,24 @@
 import { useEffect } from "react";
 
-export default function useOutSideClick({ref, handler} : any ) {
+export default function useOutSideClick(ref: any, handler: (event: any) => void) {
   useEffect(() => {
-    function listner(event: any) {
+    function listener(event: any) {
+      // Check if the click is outside the referenced element
       if (!ref.current || ref.current.contains(event.target)) {
+        return;
       }
-      handler(event)
+      // If it's outside, call the handler
+      handler(event);
     }
 
-    document.addEventListener("mousedown",listner);
-    document.addEventListener("touchstart ",listner);
+    // Attach event listeners
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
 
-    return () =>{
-         document.addEventListener("mousedown",listner);
-         document.addEventListener("touchstart",listner);   
-    }
-  }, [handler, ref]);
+    // Clean up the event listeners on unmount
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+  }, [ref, handler]); // Dependencies
 }

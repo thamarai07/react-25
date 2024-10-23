@@ -1,0 +1,26 @@
+.weather__search {
+  padding: 30px 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  justify-content: space-around;
+  gap: 30px;
+}
+.weather__search input {
+  width: 70%;
+  padding: 10px;
+  background-color: wheat;
+  color: black;
+  border-radius: 10px;
+  outline: none;
+}
+.weather__search button {
+  width: 30%;
+  padding: 10px;
+  background-color: black;
+  color: crimson;
+  font-size: larger;
+  border-radius: 10px;
+  outline: none;
+}/*# sourceMappingURL=style.css.map */
