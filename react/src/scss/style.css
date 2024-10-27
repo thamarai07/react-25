@@ -646,6 +646,7 @@
   align-items: center;
   margin: auto;
   justify-content: space-around;
+  gap: 30px;
 }
 .weather__search input {
   width: 70%;
@@ -655,7 +656,7 @@
   border-radius: 10px;
   outline: none;
 }
-.weather__search input {
+.weather__search button {
   width: 30%;
   padding: 10px;
   background-color: black;
@@ -663,4 +664,10 @@
   font-size: larger;
   border-radius: 10px;
   outline: none;
+}
+
+.recipe__wrap {
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
 }/*# sourceMappingURL=style.css.map */

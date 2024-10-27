@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
+  images: {
     remotePatterns: [
       {
         protocol: 'https',
@@ -8,8 +8,20 @@ const nextConfig = {
         port: '',
         pathname: '/photos/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'forkify-api.herokuapp.com',
+        port: '',
+        pathname: '/images/**',
+      },
+      {
+        protocol: 'http',  // Add HTTP entry for forkify API
+        hostname: 'forkify-api.herokuapp.com',
+        port: '',
+        pathname: '/images/**',
+      },
     ],
-  },    
+  },
 };
 
 export default nextConfig;

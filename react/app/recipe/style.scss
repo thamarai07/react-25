@@ -1,0 +1,30 @@
+.recipe__wrap {
+    max-width: 1024px;
+    margin: auto;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    div {
+        width: 33%;
+    }
+}
+
+.recipe__title{
+    display: flex;
+    flex: 1;
+}
+.recipe__img{
+    display: flex;
+    flex: 1;
+}
+
+.recipe__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
